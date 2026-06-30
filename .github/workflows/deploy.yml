@@ -28,33 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Debug Environment
-      run: |
-          echo "Current Directory:"
-          pwd
-
-          echo ""
-          echo "Files:"
-          ls -la
-
-          echo ""
-          echo "Recursive Files:"
-          find .
-
-          echo ""
-          echo "Python Version:"
-          python --version
-
-          echo ""
-          echo "Python Path:"
-          python -c "import sys; print(sys.path)"
-
-          echo ""
-          echo "Try importing app..."
-          python -c "from app import app; print(app)"
-
-    - name: Run Tests
-      run: pytest
 
     # Configure AWS Credentials
     - name: Configure AWS Credentials
